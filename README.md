@@ -1,4 +1,4 @@
-# ⚡ VibeShip
+# ⚡ SkillerVibes
 
 Frontend code with exceptional UX on the first generation — powered by a collective learning loop from real developer corrections.
 
@@ -7,14 +7,14 @@ Frontend code with exceptional UX on the first generation — powered by a colle
 ## Install
 
 ```bash
-claude skill install vibeship.skill
+claude skill install skillervibes.skill
 ```
 
 ## Setup
 
 ```bash
 # Connect to the community server
-export VIBESHIP_API_URL="https://api-production-0e69.up.railway.app"
+export SKILLERVIBES_API_URL="https://skillervibes.up.railway.app"
 
 # Auto-capture corrections after every session (optional, recommended)
 # Add to ~/.claude/settings.json:
@@ -24,14 +24,14 @@ export VIBESHIP_API_URL="https://api-production-0e69.up.railway.app"
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "~/.claude/skills/vibeship/scripts/capture-hook.sh"
+        "command": "~/.claude/skills/skillervibes/scripts/capture-hook.sh"
       }]
     }]
   }
 }
 ```
 
-Reading patterns works without any API key. To contribute corrections, download the skill from the [landing page](https://api-production-0e69.up.railway.app) (which bundles a shared write token), or set your own key via `VIBESHIP_API_KEY`.
+Reading patterns works without any API key. To contribute corrections, download the skill from the [landing page](https://skillervibes.up.railway.app) (which bundles a shared write token), or set your own key via `SKILLERVIBES_API_KEY`.
 
 ## How It Works
 

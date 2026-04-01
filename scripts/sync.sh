@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# VibeShip Sync — All state lives on the server
+# SkillerVibes Sync — All state lives on the server
 #
 # Usage:
 #   bash scripts/sync.sh pull                # Get latest community patterns
@@ -10,20 +10,20 @@
 set -euo pipefail
 
 SKILL_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-CACHE_DIR="${HOME}/.cache/vibeship"
+CACHE_DIR="${HOME}/.cache/skillervibes"
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # SERVER — Replace with your Railway deployment URL
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-API="${VIBESHIP_API_URL:-https://api-production-0e69.up.railway.app}"
-# Set VIBESHIP_API_KEY in your environment, or download the skill
+API="${SKILLERVIBES_API_URL:-https://skillervibes.up.railway.app}"
+# Set SKILLERVIBES_API_KEY in your environment, or download the skill
 # from the landing page which bundles a shared token automatically.
-KEY="${VIBESHIP_API_KEY:-}"
+KEY="${SKILLERVIBES_API_KEY:-}"
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 GREEN='\033[0;32m'; YELLOW='\033[0;33m'; RED='\033[0;31m'
 DIM='\033[0;90m'; BOLD='\033[1m'; RESET='\033[0m'
-header() { echo -e "\n${BOLD}⚡ VibeShip${RESET} — $1\n"; }
+header() { echo -e "\n${BOLD}⚡ SkillerVibes${RESET} — $1\n"; }
 
 auth_header() {
   if [ -n "$KEY" ]; then echo "-H" "Authorization: Bearer $KEY"; fi
@@ -55,7 +55,7 @@ cmd_pull() {
     $(auth_header) \
     "$API/api/patterns" 2>/dev/null) || {
     echo -e "${YELLOW}⚠ Server unreachable. Using seed patterns from references/ux-patterns.md${RESET}"
-    echo -e "${DIM}  Set VIBESHIP_API_URL and VIBESHIP_API_KEY in your environment${RESET}"
+    echo -e "${DIM}  Set SKILLERVIBES_API_URL and SKILLERVIBES_API_KEY in your environment${RESET}"
     return 0
   }
 
@@ -211,7 +211,7 @@ case "${1:-help}" in
   log)     cmd_log "${2:-}" ;;
   stats)   cmd_stats ;;
   *)
-    echo -e "${BOLD}⚡ VibeShip${RESET}"
+    echo -e "${BOLD}⚡ SkillerVibes${RESET}"
     echo ""
     echo "  pull      Get latest community patterns"
     echo "  capture   Classify git diffs & push to API"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-VibeShip Local Classifier — Offline fallback for diff classification.
+SkillerVibes Local Classifier — Offline fallback for diff classification.
 Uses keyword matching when the server API is unreachable.
 Not as accurate as the server's LLM-based classification, but works offline.
 

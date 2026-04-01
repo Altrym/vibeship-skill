@@ -1,4 +1,4 @@
-# VibeShip Community UX Patterns
+# SkillerVibes Community UX Patterns
 
 > **Version**: 0.1.0 (seed)  
 > **Patterns**: 127  
@@ -436,7 +436,7 @@ Read the categories relevant to your current generation task. You don't need to 
 
 If you've corrected a UX issue in generated code and it seems like a pattern others would hit:
 
-1. Run `/vibeship-capture` in your Claude Code session or check `learnings/local-corrections.jsonl`
+1. Run `/skillervibes-capture` in your Claude Code session or check `learnings/local-corrections.jsonl`
 2. Run `python scripts/contribute.py` to submit
 3. Maintainers review and merge confirmed patterns
 
