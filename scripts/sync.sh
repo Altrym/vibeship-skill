@@ -16,8 +16,9 @@ CACHE_DIR="${HOME}/.cache/vibeship"
 # SERVER — Replace with your Railway deployment URL
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 API="${VIBESHIP_API_URL:-https://api-production-0e69.up.railway.app}"
-SHARED_SKILL_KEY="vibeship_skill_09d3b16c2bee7b40ed02d50edd0f871ecd49edcd2a085830"
-KEY="${VIBESHIP_API_KEY:-$SHARED_SKILL_KEY}"
+# Set VIBESHIP_API_KEY in your environment, or download the skill
+# from the landing page which bundles a shared token automatically.
+KEY="${VIBESHIP_API_KEY:-}"
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 GREEN='\033[0;32m'; YELLOW='\033[0;33m'; RED='\033[0;31m'

@@ -48,15 +48,13 @@ The server classifies each correction into a UX category, extracts a reusable pa
 export VIBESHIP_API_URL="https://api-production-0e69.up.railway.app"
 ```
 
-The bundled skill includes a shared write token by default, so users do not need to set `VIBESHIP_API_KEY` to contribute.
-
-If you ever want to override the shared token with your own key, you still can:
+To contribute corrections back to the community, download the skill from the [landing page](https://api-production-0e69.up.railway.app) which bundles a shared write token, or set your own key:
 
 ```bash
 export VIBESHIP_API_KEY="your_key"
 ```
 
-If the shared token has been rotated and writes stop working, download the latest `vibeship.skill.md` from the hosted landing page and replace your local copy.
+Reading patterns (pull/stats) works without any key.
 
 Auto-capture hook (recommended):
 ```json

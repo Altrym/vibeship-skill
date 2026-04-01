@@ -31,9 +31,7 @@ export VIBESHIP_API_URL="https://api-production-0e69.up.railway.app"
 }
 ```
 
-The bundled skill ships with a shared write token, so `VIBESHIP_API_KEY` is optional. Set your own only if you want to override the shared token later.
-
-If the shared token gets rotated, download the latest `vibeship.skill.md` and replace your local skill file.
+Reading patterns works without any API key. To contribute corrections, download the skill from the [landing page](https://api-production-0e69.up.railway.app) (which bundles a shared write token), or set your own key via `VIBESHIP_API_KEY`.
 
 ## How It Works
 
